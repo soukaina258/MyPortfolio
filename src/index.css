@@ -1,0 +1,1249 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dark-theme {
+  background-color: #000000;
+  color: #F1F1F1;
+}
+
+/* Ensure proper navbar styling */
+.app {
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Dark theme changes text color */
+.dark-theme .text-black {
+  color: #F1F1F1;
+}
+
+/* Keep navbar text black even in dark mode */
+.navigation a span.text-black {
+  color: black !important;
+}
+
+/* Animation keyframes for tech icons */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-wave {
+  0% { transform: scale(0.95); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(0.95); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+.animate-pulse-wave {
+  animation: pulse-wave 4s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Tech icon hover effects */
+.tech-icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.tech-icon:hover {
+  filter: drop-shadow(0 0 8px rgba(108, 114, 203, 0.5));
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 15s ease infinite;
+}
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(-10px) rotate(45deg); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 6s ease-in-out infinite;
+}
+.bg-grid {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+@keyframes pulse-wave {
+  0% { transform: scale(0.95); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(0.95); opacity: 1; }
+}
+.animate-pulse-wave {
+  animation: pulse-wave 4s ease-in-out infinite;
+}
+  .video-wrapper {
+    transition: width 0.5s ease-in-out, border 0.5s ease-in-out;
+  }
+  
+
+  
+  @media screen and (max-width: 770px) {
+    .video-wrapper.video-visible {
+      border-width: 1px !important;
+      border-radius: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 1270px) {
+    .video-wrapper {
+      border-radius: 20px;
+    }
+  }
+
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .app {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Additional dark mode styles */
+  .dark-theme {
+    background-color: #000000;
+    color: #F9F8F6;
+  }
+  
+  /* Smooth transitions for all elements when toggling dark/light mode */
+  *, *::before, *::after {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+  }
+
+/* Force black text for rotating text and contact button */
+.rotating-text-container span,
+.btn-secondary {
+  color: #000000 !important;
+}
+
+/* Always keep the blur text black */
+.max-w-\[500px\].mt-6.text-\[1\.1rem\].leading-relaxed.opacity-75 {
+  color: #000000 !important;
+}
+
+/* Improve hover transitions */
+.group:hover .group-hover\:scale-105 {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.card {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.card-text {
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Logo hover animation - make more subtle */
+.header-logo-box {
+  width: max-content !important; /* Prevent layout shifts */
+}
+
+.header-logo-box .text-\[1\.8rem\] {
+  transition: none !important;
+  transform: none !important; /* No movement */
+}
+
+.header-logo-box:hover .text-\[1\.8rem\] {
+  transform: translateX(3px); /* Small movement on hover */
+}
+
+/* Fix tracking animation to be more subtle */
+.header-logo-box .tracking-\[0\.3em\] {
+  transition: none !important;
+  letter-spacing: 0.3em !important; /* Fixed letter spacing */
+}
+
+.header-logo-box:hover .tracking-\[0\.3em\],
+.header-logo-box .group-hover\:tracking-\[0\.35em\] {
+  letter-spacing: 0.3em !important; /* Keep letter spacing fixed */
+}
+
+/* Remove width transitions for the lines in the header */
+.header-logo-box .w-8.h-px,
+.header-logo-box .group-hover\:w-10 {
+  transition: none !important;
+  width: 8px !important; /* Fixed width */
+}
+
+/* Remove translate effect for the shine overlay */
+.header-logo-box .translate-x-\[-100\%\],
+.header-logo-box .group-hover\:translate-x-\[100\%\] {
+  transition: none !important;
+  transform: none !important;
+  opacity: 0 !important;
+}
+
+/* Keep navigation links stable */
+.navigation a {
+  transition: color 0.3s ease !important; /* Only allow color transition */
+}
+
+/* Keep the line indicator's position static on navigation links */
+.navigation a .absolute.bottom-0.left-0.w-0.h-\[2px\],
+.navigation a .group-hover\:w-full {
+  transition: none !important;
+  width: 0 !important;
+}
+
+/* Only show line indicator when active */
+.navigation a.active .absolute.bottom-0.left-0.w-0.h-\[2px\] {
+  width: 100% !important;
+}
+
+/* Skill animations */
+.skill-item {
+  overflow: hidden;
+}
+
+.skill-item .skill-content {
+  position: relative;
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-item .video-wrapper {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  max-height: 150px;
+}
+
+.skill-item video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.skill-item p {
+  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin: 10px 0;
+}
+
+/* Initial state - words are close together */
+.skill-item:not(.skill-animated) .skill-content p:first-child {
+  margin-right: -8px;
+}
+
+.skill-item:not(.skill-animated) .skill-content p:last-child {
+  margin-left: -8px;
+}
+
+/* Animated state when scrolled into view */
+.skill-item.skill-animated .video-wrapper {
+  opacity: 1;
+  transform: scale(1);
+  border-color: rgba(108, 114, 203, 0.5);
+  margin: 0 16px;
+  width: 80px !important; /* Default width for mobile */
+}
+
+/* Responsive sizing for different screens */
+@media (min-width: 480px) {
+  .skill-item.skill-animated .video-wrapper {
+    width: 60px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .skill-item.skill-animated .video-wrapper {
+    width: 80px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill-item.skill-animated .video-wrapper {
+    width: 150px !important;
+  }
+}
+
+/* Handle words spacing for different screen sizes */
+@media (max-width: 480px) {
+  .skill-item.skill-animated .skill-content {
+    flex-direction: column;
+  }
+  
+  .skill-item.skill-animated .skill-content p {
+    margin: 8px 0;
+    transform: none !important;
+  }
+  
+  .skill-item.skill-animated .video-wrapper {
+    margin: 10px 0;
+    width: 120px !important;
+    height: 80px !important;
+  }
+}
+
+@media (min-width: 481px) {
+  .skill-item.skill-animated .skill-content p:first-child {
+    transform: translateX(-15px);
+  }
+  
+  .skill-item.skill-animated .skill-content p:last-child {
+    transform: translateX(15px);
+  }
+}
+
+/* Section animations */
+.hero,
+.projects,
+.about,
+.contact-container,
+.w-full.my-\[10em\] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-animated {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Project cards staggered animation */
+.projects .transform-gpu {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section-animated.projects .transform-gpu:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.section-animated.projects .transform-gpu:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.section-animated.projects .transform-gpu:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.section-animated.projects .transform-gpu:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.section-animated.projects .transform-gpu:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.section-animated.projects .transform-gpu:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.section-animated.projects .transform-gpu {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* About section animations */
+.about p, 
+.about h2,
+.about .relative {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section-animated.about p {
+  transition-delay: 0.2s;
+}
+
+.section-animated.about h2 {
+  transition-delay: 0.1s;
+}
+
+.section-animated.about .relative {
+  transition-delay: 0.3s;
+}
+
+.section-animated.about p,
+.section-animated.about h2,
+.section-animated.about .relative {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact section elements animation */
+.section-animated .contact h2,
+.section-animated .contact-details {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section-animated .contact h2 {
+  transition-delay: 0.2s;
+}
+
+.section-animated .contact-details {
+  transition-delay: 0.4s;
+}
+
+.section-animated .contact h2,
+.section-animated .contact-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero section animations */
+.hero .text-6xl,
+.hero .text-4xl,
+.hero .motion-div,
+.hero a {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-animated.hero .text-6xl {
+  transition-delay: 0.1s;
+}
+
+.section-animated.hero .text-4xl {
+  transition-delay: 0.2s;
+}
+
+.section-animated.hero .motion-div {
+  transition-delay: 0.3s;
+}
+
+.section-animated.hero a {
+  transition-delay: 0.4s;
+}
+
+.section-animated.hero .text-6xl,
+.section-animated.hero .text-4xl,
+.section-animated.hero .motion-div,
+.section-animated.hero a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fix contact section animations */
+.contact-container .contact-content h2,
+.contact-container .contact-details {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section-animated.contact-container .contact-content h2 {
+  transition-delay: 0.2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-animated.contact-container .contact-details {
+  transition-delay: 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add mobile responsive layout for hero section */
+@media screen and (max-width: 1023px) {
+  .hero .main-container {
+    padding: 0 1rem;
+  }
+  
+  .hero .min-h-\[630px\] {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 2rem;
+  }
+  
+  .hero .w-full.relative.z-\[3\] {
+    flex-direction: column !important;
+  }
+  
+  .hero .w-fit.lg\:w-\[70\%\] {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 2rem 1.5rem !important;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero .w-full.lg\:w-\[27\%\] {
+    width: 100% !important;
+    margin-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .hero .w-\[310px\].h-\[450px\] {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero .w-\[320px\].h-full {
+    width: 100% !important;
+    max-width: 360px !important;
+    height: auto !important;
+    min-height: 300px;
+    border-radius: 20px !important;
+  }
+  
+  /* Center and size the heading text properly */
+  .hero .heading-text {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero .rotating-text-container {
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* Center the blur text */
+  .hero .max-w-\[500px\].mt-6 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  
+  /* Center the CTA buttons */
+  .hero .mt-8.flex {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Add a scroll down arrow between the sections */
+  .hero .w-full.relative.z-\[3\]:after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    position: relative;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+  }
+  
+  .hero .w-full.relative.z-\[3\]:after:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+  }
+  
+  /* Fix swiper slides on mobile */
+  .hero .projects-swiper, 
+  .hero .stats-swiper {
+    width: 100% !important;
+  }
+  
+  /* Adjust text sizes for mobile */
+  .hero .text-\[5rem\] {
+    font-size: 4rem !important;
+    line-height: 1;
+  }
+  
+  .hero .slide-up.text-\[clamp\(3rem\,6vw\,4\.5rem\)\] {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+  }
+}
+
+/* Add animation for the down arrow */
+@keyframes pulse {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  
+  50% {
+    transform: translateY(10px);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+  
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Improve mobile design to match the image */
+@media screen and (max-width: 767px) {
+  /* Improve text organization and spacing */
+  .hero .min-h-\[630px\] {
+    padding-top: 1rem !important;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Main text container styling for mobile */
+  .hero .w-fit.lg\:w-\[70\%\] {
+    border-radius: 16px;
+    padding: 1.5rem !important;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #4e6fff, #45b6fe, #c561ed);
+    border: none !important;
+  }
+  
+  /* Fix "Hello, I'm an" positioning */
+  .hero .slide-up.font-light.text-\[1\.2rem\] {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+    color: #000000 !important;
+  }
+  
+  /* Reduce spacing between elements */
+  .hero .heading-text {
+    margin-top: 1rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Ensure rotating text is fully visible */
+  .hero .rotating-text-container {
+    height: auto !important;
+    min-height: 3rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Make the heading text black on mobile, not white */
+  .hero .heading-text .slide-up,
+  .hero .rotating-text-container span,
+  .hero .max-w-\[500px\].mt-6 {
+    color: #000000 !important;
+  }
+  
+  /* Fix SVG corner position */
+  .svg-corner.corner-logo-box-two.absolute.ml-\[2em\].-bottom-7,
+  .svg-corner.corner-logo-box-two.ml-\[2em\] {
+    margin-left: 0 !important;
+    left: 0 !important;
+  }
+  
+  /* Reduce gaps between text elements */
+  .hero .overflow-hidden.mb-2 {
+    margin-bottom: 0.25rem !important;
+  }
+  
+  /* Make sure text elements stack properly with less space */
+  .hero .heading-text > div {
+    margin-bottom: 0.25rem !important;
+  }
+  
+  /* Ensure Blur Text has proper spacing */
+  .hero .max-w-\[500px\].mt-6 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Ensure buttons have proper spacing */
+  .hero .mt-8.flex {
+    margin-top: 1rem !important;
+  }
+  
+  /* Adjust stats card to match image */
+  .stats-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: 160px !important;
+    border-radius: 16px !important;
+    margin: 0 auto 1rem !important;
+    background: #000 !important;
+  }
+  
+  /* Adjust stats content positioning */
+  .stats-content {
+    justify-content: center !important;
+    padding: 1rem !important;
+  }
+  
+  /* Adjust the stats number size */
+  .stats-number {
+    font-size: 3rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  /* Adjust the stats text styling */
+  .stats-text {
+    font-size: 0.9rem !important;
+    color: #ccc !important;
+  }
+  
+  /* Add indicator dots for slides */
+  .stats-pagination {
+    bottom: 0.5rem !important;
+  }
+  
+  /* Format the projects card like in image */
+  .projects-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: 260px !important;
+    border-radius: 16px !important;
+    margin: 0 auto !important;
+    background: #000 !important;
+    overflow: hidden !important;
+  }
+  
+  /* Add back the scroll down arrow */
+  .scroll-down-arrow {
+    display: flex !important;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  /* Fix spacing between elements */
+  .hero .w-full.lg\:w-\[27\%\] {
+    margin-top: 0 !important;
+    gap: 1rem !important;
+  }
+  
+  /* Center all text in the hero on mobile */
+  .hero .heading-text * {
+    text-align: center !important;
+  }
+  
+  /* Add a nice subtle shadow to the main containers */
+  .hero .w-fit.lg\:w-\[70\%\],
+  .stats-card,
+  .projects-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+/* New Modern Mobile Menu Styles */
+/* Hamburger Button */
+.mobile-menu-btn {
+  position: relative;
+  z-index: 1000;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-btn:active {
+  transform: scale(0.9);
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-icon .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-open .hamburger-icon .line-1 {
+  opacity: 0;
+}
+
+.menu-open .hamburger-icon .line-2 {
+  opacity: 0;
+}
+
+.menu-open .hamburger-icon .line-3 {
+  opacity: 0;
+}
+
+/* Fullscreen Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 0;
+  color: white;
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile Menu Navigation Links */
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mobile-nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.mobile-nav-link.active {
+  background: linear-gradient(135deg, rgba(108, 114, 203, 0.4), rgba(203, 105, 193, 0.4));
+  color: white;
+  font-weight: 700;
+  transform: translateX(10px);
+  padding-left: 1.5rem;
+  box-shadow: 0 5px 20px rgba(108, 114, 203, 0.3);
+  border-radius: 12px;
+}
+
+.mobile-nav-link.active .mobile-nav-number {
+  color: white;
+  font-weight: 700;
+}
+
+.mobile-nav-link.active .mobile-nav-text {
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav-link.active .mobile-nav-indicator {
+  width: 100% !important;
+  height: 5px;
+  background: linear-gradient(to right, #6c72cb, #cb69c1);
+  box-shadow: 0 0 15px rgba(203, 105, 193, 0.9);
+  animation: pulse 2s infinite;
+  border-radius: 5px;
+}
+
+.mobile-nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 70%;
+  width: 6px;
+  background: white;
+  border-radius: 3px;
+}
+
+.mobile-nav-number {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  width: 30px;
+}
+
+.mobile-nav-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.mobile-nav-indicator {
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #6c72cb, #cb69c1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-link.active .mobile-nav-indicator {
+  width: 100%;
+}
+
+.mobile-nav-link.active .mobile-nav-number {
+  color: #cb69c1;
+}
+
+/* Mobile Menu Footer */
+.mobile-menu-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Redesigned Theme Switch */
+.mobile-theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-mode-text {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Social Links */
+.mobile-social-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #6c72cb, #cb69c1);
+  box-shadow: 0 5px 15px rgba(108, 114, 203, 0.4);
+}
+
+/* Animated entry for menu items */
+.mobile-menu-overlay.open .mobile-nav-link {
+  animation: fadeInUp 0.5s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.mobile-menu-overlay.open .mobile-nav-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.mobile-menu-overlay.open .mobile-nav-link:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.mobile-menu-overlay.open .mobile-nav-link:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.mobile-menu-overlay.open .mobile-nav-link:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.mobile-menu-overlay.open .mobile-theme-switch,
+.mobile-menu-overlay.open .mobile-social-links {
+  animation: fadeInUp 0.5s forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 0.5s;
+}
+
+.mobile-menu-overlay.open .mobile-social-links {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add subtle grain texture to the menu */
+.mobile-menu-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Close button in the mobile menu */
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-menu-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.mobile-menu-close:active {
+  transform: scale(0.9) rotate(90deg);
+}
+
+/* Updated mobile theme toggle */
+.mobile-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.mobile-dark-mode-toggle {
+  transform: scale(1.2);
+}
+
+/* Ensure menu items have proper click area */
+.mobile-nav-link {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Fix mobile menu display when open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Adjust the overlay to take up the full viewport height properly */
+.mobile-menu-overlay {
+  height: 100dvh;
+}
+
+/* Make sure mobile menu closes when clicking navigation items */
+.mobile-nav-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Make the close button more visible */
+.mobile-menu-close svg {
+  stroke-width: 2;
+  width: 24px;
+  height: 24px;
+}
+
+/* Make sections more distinguishable for the scroll detection */
+#projects, #about, #skills, #contact {
+  scroll-margin-top: 100px; /* Helps with scroll positioning */
+  position: relative; /* Ensure position is defined for offsetTop */
+  min-height: 300px; /* Ensure sections have enough height to be detected */
+}
+
+/* Debug styles to help visualize sections (remove in production) */
+[data-section] {
+  position: relative;
+}
+
+/* Force the page to scroll to refresh the section detection */
+html {
+  scroll-behavior: smooth;
+  }
+
+/* Fix contact section responsive issues */
+.contact-container .contact {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure proper overflow handling */
+.contact-container .contact {
+  overflow: hidden !important; /* Prevent scrollbars */
+}
+
+/* Improved responsive handling for contact section */
+@media screen and (max-width: 767px) {
+  .contact-container {
+    margin-top: 1em;
+    padding: 0 1em;
+  }
+  
+  .contact-container .contact {
+    min-height: 450px;
+    height: auto !important;
+    padding: 2em 1.5em !important;
+  }
+  
+  .contact-container .contact-content h2 {
+    font-size: 2.5rem !important;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-container .contact-details {
+    align-self: flex-end;
+    margin-top: 2rem;
+  }
+  
+  .contact-container .star-button {
+    font-size: 1.2rem !important;
+    padding: 0.4em 0.8em !important;
+  }
+  
+  .contact-container .mail-link {
+    font-size: 1rem !important;
+    max-width: 100%;
+    word-break: break-word;
+    text-align: right;
+  }
+}
+
+/* Medium screens */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contact-container .contact {
+    min-height: 500px;
+    height: auto !important;
+    padding: 3em 3em !important;
+  }
+  
+  .contact-container .contact-content h2 {
+    font-size: 3.5rem !important;
+  }
+  
+  .contact-container .star-button {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Fix for overflow issues across all screen sizes */
+body, .app {
+  overflow-x: hidden;
+}
+
+/* Add proper spacing for contact at the page bottom */
+.contact-container {
+  margin-bottom: 3em;
+  }
