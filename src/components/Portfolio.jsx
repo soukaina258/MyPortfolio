@@ -1168,7 +1168,7 @@ export default function Portfolio() {
                                             >
                                                 <div className="relative flex items-center justify-center rounded-full overflow-hidden transition-all duration-300 ease-in-out" style={{ width: "50px", height: "50px" }}>
                                                     <img 
-                                                        src="/tech-stack/react-native.svg" 
+                                                        src="tech-stack/react-native.svg" 
                                                         alt="React Native" 
                                                         className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                                     />
@@ -1194,7 +1194,7 @@ export default function Portfolio() {
                                             >
                                                 <div className="relative flex items-center justify-center rounded-full overflow-hidden transition-all duration-300 ease-in-out" style={{ width: "50px", height: "50px" }}>
                                                     <img 
-                                                        src="/tech-stack/dotnet.svg" 
+                                                        src="tech-stack/dotnet.svg" 
                                                         alt=".NET" 
                                                         className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                                     />
@@ -1218,7 +1218,7 @@ export default function Portfolio() {
                                                     style={{ width: "50px", height: "50px" }}
                                                 >
                                                     <img 
-                                                        src="/tech-stack/tailwind.svg" 
+                                                        src="tech-stack/tailwind.svg" 
                                                         alt="Tailwind CSS" 
                                                         className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                                         style={{ filter: darkMode ? "brightness(1.3)" : "none" }}
@@ -1242,7 +1242,7 @@ export default function Portfolio() {
                                                     style={{ width: "50px", height: "50px" }}
                                                 >
                                                     <img 
-                                                        src="/tech-stack/Nodejs.svg" 
+                                                        src="tech-stack/Nodejs.svg" 
                                                         alt="Node.js" 
                                                         className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                                     />
@@ -1307,7 +1307,7 @@ export default function Portfolio() {
                                                     style={{ width: "50px", height: "50px" }}
                                                 >
                                                     <img 
-                                                        src="/tech-stack/sqlserver.svg" 
+                                                        src="tech-stack/sqlserver.svg" 
                                                         alt="SQL Server" 
                                                         className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                                     />
@@ -1331,7 +1331,7 @@ export default function Portfolio() {
                                                     style={{ width: "50px", height: "50px" }}
                                                 >
                                                     <img 
-                                                        src="/tech-stack/supabase.svg" 
+                                                        src="tech-stack/supabase.svg" 
                                                         alt="Supabase" 
                                                         className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                                     />
@@ -1355,7 +1355,7 @@ export default function Portfolio() {
                                                     style={{ width: "50px", height: "50px" }}
                                                 >
                                                     <img 
-                                                        src="/tech-stack/prisma.svg" 
+                                                        src="tech-stack/prisma.svg" 
                                                         alt="Prisma" 
                                                         className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                                     />
@@ -1401,7 +1401,7 @@ export default function Portfolio() {
                                         <div className="relative flex items-center justify-center rounded-full overflow-hidden transition-all duration-300" 
                                             style={{ width: "50px", height: "50px" }}>
                                             <img 
-                                                src="/tech-stack/jira.svg"
+                                                src="tech-stack/jira.svg"
                                                 alt="Jira Scrum"
                                                 className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                             />
@@ -1423,7 +1423,7 @@ export default function Portfolio() {
                                         <div className="relative flex items-center justify-center rounded-full overflow-hidden transition-all duration-300" 
                                             style={{ width: "50px", height: "50px" }}>
                                             <img 
-                                                src="/tech-stack/figma.svg"
+                                                src="tech-stack/figma.svg"
                                                 alt="Figma"
                                                 className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                             />
@@ -1446,7 +1446,7 @@ export default function Portfolio() {
                                         <div className="relative flex items-center justify-center rounded-full overflow-hidden transition-all duration-300" 
                                             style={{ width: "50px", height: "50px" }}>
                                             <img 
-                                                src="/tech-stack/postman.svg"
+                                                src="tech-stack/postman.svg"
                                                 alt="Postman"
                                                 className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                             />
@@ -1468,7 +1468,7 @@ export default function Portfolio() {
                                         <div className="relative flex items-center justify-center rounded-full overflow-hidden transition-all duration-300" 
                                             style={{ width: "50px", height: "50px" }}>
                                             <img 
-                                                src="/tech-stack/xampp.svg"
+                                                src="tech-stack/xampp.svg"
                                                 alt="XAMPP"
                                                 className="w-[35px] h-[35px] transition-all duration-300 animate-fadeIn"
                                             />
