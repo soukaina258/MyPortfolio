@@ -115,22 +115,22 @@ export default function Portfolio() {
         {
             title: "UI/UX design ",
             issuer: "Orange Morocco",
-            image: "./tech-stack/OIP.jpg"
+            image: "tech-stack/OIP.jpg"
         },
         {
             title: "Project Completion Certificate",
             issuer: "School of Management, Telecommunications and Computer Science — Sup MTI",
-            image: "./tech-stack/SUPMTI.png"
+            image: "tech-stack/SUPMTI.png"
         },
         {
             title: "Emotional Intelligence Certificate",
             issuer: "School of Management, Telecommunications and Computer Science — Sup MTI",
-            image: "./tech-stack/SUPMTI.png"
+            image: "tech-stack/SUPMTI.png"
         },
         {
             title: "Cisco Certified Network Security ",
             issuer: "Cisco",
-            image: "./tech-stack/cisco.jpg"
+            image: "tech-stack/cisco.jpg"
         }
     ];
 
@@ -1535,7 +1535,7 @@ export default function Portfolio() {
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
                              <ProjectImage
-                                src="./projects/erraji.png"
+                                src="projects/erraji.png"
                                 alt="Erraji Voyage App"
                             />
                             {/* Status bar */}
@@ -1638,7 +1638,7 @@ export default function Portfolio() {
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
                             <ProjectImage
-                                src="./projects/hiring.png"
+                                src="projects/hiring.png"
                                 alt="Hiring App"
                             />
                             {/* Status bar */}
@@ -1739,7 +1739,7 @@ export default function Portfolio() {
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
                             <ProjectImage
-                                src="./projects/gmail.png"
+                                src="projects/gmail.png"
                                 alt="Gmail AI Filtering App"
                             />
                             {/* Status + Category */}
@@ -1865,7 +1865,7 @@ export default function Portfolio() {
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
                             <ProjectImage
-                                src="./projects/saas.png"
+                                src="projects/saas.png"
                                 alt="LabCall AI Customer Support"
                             />
                             {/* Status + Category */}
@@ -1997,7 +1997,7 @@ export default function Portfolio() {
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
                             <ProjectImage
-                                src="./projects/iboarding.png"
+                                src="projects/iboarding.png"
                                 alt="Digital Boarding Pass"
                             />
                             {/* Status + Category */}
