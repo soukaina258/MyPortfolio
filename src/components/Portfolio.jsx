@@ -2677,9 +2677,9 @@ export default function Portfolio() {
                         </span>
                     </div>
                     <div className="w-3 h-3 bg-white dark:bg-[#0D1B2A] border-r border-b border-[#25D366]/20 transform rotate-45 absolute -bottom-1.5 right-6"></div>
-                    </div>
+                    </div >
                 </div>
-                </motion.a>
+                </motion.a> 
 
         
         </>
