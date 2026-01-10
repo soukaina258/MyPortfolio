@@ -134,6 +134,35 @@ export default function Portfolio() {
         }
     ];
 
+    const ProjectImage = ({ src, alt }) => (
+        <div className="relative w-full mb-5 sm:mb-6">
+            <div
+            className="
+                relative w-full
+                h-[180px]
+                sm:h-[220px]
+                md:h-[260px]
+                lg:h-[300px]
+                rounded-xl
+                overflow-hidden
+            "
+            >
+            <img
+                src={src}
+                alt={alt}
+                className="
+                absolute inset-0
+                w-full h-full
+                object-cover
+                transition-transform duration-500
+                md:group-hover:scale-105
+                "
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+            </div>
+        </div>
+    );
+
     const menuPreviousSectionRef = useRef(null);
  
     const toggleMenu = () => {
@@ -1505,7 +1534,10 @@ export default function Portfolio() {
 
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
-
+                             <ProjectImage
+                                src="/projects/erraji.png"
+                                alt="Erraji Voyage App"
+                            />
                             {/* Status bar */}
                             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                                 <span className="text-[0.65rem] sm:text-xs px-3 py-1 bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 rounded-full font-medium border border-amber-200 dark:border-amber-800/30 flex items-center gap-2">
@@ -1605,7 +1637,10 @@ export default function Portfolio() {
 
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
-
+                            <ProjectImage
+                                src="/projects/hiring.png"
+                                alt="Hiring App"
+                            />
                             {/* Status bar */}
                             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                                 <span className="text-[0.65rem] sm:text-xs px-3 py-1 bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-300 rounded-full font-medium border border-amber-200 dark:border-amber-800/30 flex items-center gap-2">
@@ -1626,14 +1661,14 @@ export default function Portfolio() {
                                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 group-hover:text-[#E7C8A0] transition-colors duration-300"
                                 style={{ color: darkMode ? "#F9F8F6" : "#0D1B2A" }}
                                 >
-                                Booking Services
+                                Hiring App
                                 </h3>
 
                                 <p
                                 className="text-sm sm:text-base md:text-lg leading-relaxed opacity-70"
                                 style={{ color: darkMode ? "#F9F8F6" : "#0D1B2A" }}
                                 >
-                                A service-booking app built with React Native, Expo, Supabase, Prisma, and PostgreSQL. Users can browse providers, view profiles, filter services, and make bookings, while the backend handles authentication, profile management, listings, and secure data storage. It focuses on a smooth user experience, fast search, and a clean, professional interface.
+                                A Hiring app built with React Native, Expo, Supabase, Prisma, and PostgreSQL. Clients can browse Contractors, view profiles, filter services, and make bookings, while the backend handles authentication, profile management, listings, and secure data storage. It focuses on a smooth user experience, fast search, and a clean, professional interface.
                                 </p>
                             </div>
 
@@ -1703,7 +1738,10 @@ export default function Portfolio() {
 
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
-
+                            <ProjectImage
+                                src="/projects/gmail.png"
+                                alt="Gmail AI Filtering App"
+                            />
                             {/* Status + Category */}
                             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                                 <span className="text-[0.65rem] sm:text-xs px-2.5 sm:px-3 py-1 sm:py-1.5 bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 rounded-full font-medium border border-green-200 dark:border-green-800/30 flex items-center gap-1.5">
@@ -1826,7 +1864,10 @@ export default function Portfolio() {
 
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
-
+                            <ProjectImage
+                                src="/projects/saas.png"
+                                alt="LabCall AI Customer Support"
+                            />
                             {/* Status + Category */}
                             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                                 <span className="text-[0.65rem] sm:text-xs px-2.5 sm:px-3 py-1 sm:py-1.5 bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 rounded-full font-medium border border-green-200 dark:border-green-800/30 flex items-center gap-1.5">
@@ -1955,7 +1996,10 @@ export default function Portfolio() {
 
                         <div className="p-5 sm:p-6 md:p-8 lg:p-10">
                             <div className="space-y-3 sm:space-y-4">
-
+                            <ProjectImage
+                                src="/projects/iboarding.png"
+                                alt="Digital Boarding Pass"
+                            />
                             {/* Status + Category */}
                             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                                 <span className="text-[0.65rem] sm:text-xs px-2.5 sm:px-3 py-1 sm:py-1.5 bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 rounded-full font-medium border border-green-200 dark:border-green-800/30 flex items-center gap-1.5">
@@ -2596,34 +2640,47 @@ export default function Portfolio() {
                     
                 </div>
             </section>
-            <motion.a 
-                href="mailto:soukainasbai77@gmail.com?subject=Let's Discuss Your Project" 
+            <motion.a
+                href="https://wa.me/212707875976?text=Hi%20Soukaina,%20I'd%20like%20to%20discuss%20a%20project"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="fixed bottom-8 right-8 z-[100] group"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 1, duration: 0.5, type: "spring" }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-            >
+                >
                 <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#E870A4] to-[#E7C8A0] animate-ping opacity-75"></div>
+                    {/* Ping effect */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#25D366] to-[#128C7E] animate-ping opacity-75" />
+
+                    {/* Button */}
+                    <div className="relative w-16 h-16 rounded-full bg-gradient-to-r from-[#25D366] to-[#128C7E] shadow-2xl shadow-[#25D366]/40 flex items-center justify-center group-hover:shadow-[#25D366]/60 transition-all duration-300">
                     
-                    <div className="relative w-16 h-16 rounded-full bg-gradient-to-r from-[#E870A4] to-[#E7C8A0] shadow-2xl shadow-[#E870A4]/40 flex items-center justify-center group-hover:shadow-[#E870A4]/60 transition-all duration-300">
-                        <svg className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                        </svg>
+                    {/* WhatsApp Icon */}
+                    <svg
+                        className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        >
+                        <path d="M12.04 2C6.58 2 2.15 6.42 2.15 11.89c0 2.1.55 4.06 1.5 5.76L2 22l4.47-1.63a9.87 9.87 0 005.57 1.63h.01c5.46 0 9.89-4.43 9.89-9.89C21.93 6.42 17.5 2 12.04 2zm0 17.93h-.01a8.2 8.2 0 01-4.19-1.15l-.3-.18-2.65.97.86-2.58-.2-.33a8.22 8.22 0 01-1.25-4.44c0-4.56 3.71-8.27 8.28-8.27 4.56 0 8.27 3.71 8.27 8.27 0 4.56-3.71 8.27-8.27 8.27zm4.53-6.2c-.25-.12-1.47-.72-1.7-.8-.23-.08-.4-.12-.57.12-.17.25-.65.8-.8.96-.15.17-.3.19-.55.06-.25-.12-1.05-.39-2-1.25-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.52.11-.11.25-.3.37-.45.12-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.57-1.37-.78-1.88-.2-.48-.4-.42-.57-.43h-.48c-.17 0-.45.06-.68.32-.23.25-.9.88-.9 2.15 0 1.27.93 2.5 1.06 2.67.13.17 1.83 2.79 4.44 3.92.62.27 1.1.43 1.47.55.62.2 1.19.17 1.63.1.5-.08 1.47-.6 1.68-1.19.21-.59.21-1.1.15-1.19-.06-.1-.23-.15-.48-.27z" />
+                    </svg>
                     </div>
-                    
+
+                    {/* Tooltip */}
                     <div className="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                        <div className="bg-white dark:bg-[#0D1B2A] px-4 py-2 rounded-lg shadow-xl border border-[#E870A4]/20 whitespace-nowrap">
-                            <span className="text-sm font-medium bg-gradient-to-r from-[#E870A4] to-[#E7C8A0] bg-clip-text text-transparent">
-                                Let's Discuss Your Project
-                            </span>
-                        </div>
-                        <div className="w-3 h-3 bg-white dark:bg-[#0D1B2A] border-r border-b border-[#E870A4]/20 transform rotate-45 absolute -bottom-1.5 right-6"></div>
+                    <div className="bg-white dark:bg-[#0D1B2A] px-4 py-2 rounded-lg shadow-xl border border-[#25D366]/20 whitespace-nowrap">
+                        <span className="text-sm font-medium text-[#25D366]">
+                        Chat on WhatsApp
+                        </span>
+                    </div>
+                    <div className="w-3 h-3 bg-white dark:bg-[#0D1B2A] border-r border-b border-[#25D366]/20 transform rotate-45 absolute -bottom-1.5 right-6"></div>
                     </div>
                 </div>
-            </motion.a>
+                </motion.a>
+
         
         </>
     );
