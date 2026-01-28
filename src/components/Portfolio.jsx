@@ -3616,7 +3616,7 @@ export default function Portfolio() {
                 transition={{ duration: 0.6, delay: 1 }}
               >
                 Have a project in mind? Let's discuss how we can bring your
-                vision to life with elegant code and thoughtful design.
+                vision to life with elegant code and thoughtful design..
               </motion.p>
             </motion.div>
 
